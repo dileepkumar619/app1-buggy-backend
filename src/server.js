@@ -33,5 +33,4 @@ app.use((err, req, res, next) => {
 app.listen(PORT, () => {
   console.log(`App 1 running on http://localhost:${PORT}`);
   console.log(`Trigger bug using http://localhost:${PORT}/users/register`);
-
 });
