@@ -14,8 +14,8 @@ router.get('/:id', (req, res) => {
 
   const response = {
     id: user.id,
-    name: user.name.toUpperCase(),
-    email: user.email.toLowerCase()
+    name: user.name ? user.name.toUpperCase() : undefined,
+    email: user.email ? user.email.toLowerCase() : undefined
   };
 
   res.status(200).json(response);
