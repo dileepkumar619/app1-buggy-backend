@@ -8,7 +8,7 @@ router.get('/:id', (req, res) => {
   const id = Number(req.params.id);
   const user = users.find((u) => u.id === id);
 
-  if (!user) {
+  if (!Array.isArray(users) || !user) {
     return res.status(404).json({ message: 'User not found' });
   }
 
